@@ -20,8 +20,28 @@ Ethan will additionally handle any issues with maintaining our project's reposit
 
 ## Datasets
 
+We intend to access various datasets from two primary databases in order to obtain the data necessary to perform the analysis as it has been described above. 
+
+These will be, as previously noted, WorldBank - https://www.worldbank.org/ext/en/country/italy and Istat - https://www.istat.it/en/.
+
+We currently intend to use the data from WorldBank for more general nationwide analysis and examining trends on a larger scale, while garnering more region specific data from Istat to see how trends in industry weight and unemployment may change spatially.
+
+Aggregation of the data for verifying data validity and consitency across sources will be performed to ensure the data quality of our projects analysis as well.
+
 ## Timeline
+
+This project outline is intended to be completed by the 12th of March 2026.
+
+We will ideally finish collecting, organizing, aggregating, and cleaning a majority (assuming no unforseen changes or difficulties) of the data required to begin performing analysis, by the time that our interim status report is due on the 31st of March 2026.
+
+Exploratory analysis of the data will be primarily performed in the period between finishing garnering our data and the first week of april, we intend to finish exploratory analysis and identifying any further issues by the 7th of April 2026.
+
+We will then begin visualization of our data and further analysis in order to draw conclusions before beginning the final preparations of our projects report and presentation. This secondary stage of analysis will ideally be complete by the 14th of April 2026.
+
+The final stage of our project will be to tie up any loose ends in terms of managing our data and completing any additional required analysis before writing our final project report and presentation. We intend to finish drafts of these by the 21st and 23rd of April 2026 respectively, and complete our final drafts of each by the 3rd of May 2026.
 
 ## Constraints
 
 ## Gaps
+
+Currently the only areas where we anticipate needing additional input to ensure the quality of our project plan and the projects foreseeable proceedings are in whether the databases will provide all the anticipated data we will need as they describe respectively (we anticipate the databases will cover all areas outlined above) and what keys would be ideal for any merging between these datasets, as nation wide and region specific data may not necessariily need to be merged or have an obvious means for doing so if this ends up being required.
