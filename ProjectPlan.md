@@ -12,6 +12,10 @@ We will then perform the analysis using a range of visualization and exploratory
 
 ## Team
 
+Both team members (Ethan Mallory - ethanm8@illinois.edu and Alex Tapanes - tapanes2@illinois.edu) will assume equal responsibility for completing all required tasks and coordinate to complete the goals as desingated above throughout the duration of the project.
+
+Ethan will additionally handle any issues with maintaining our project's repository via GitHub as he is the owner of the repository.
+
 ## Research / Business Questions
 
 ## Datasets
