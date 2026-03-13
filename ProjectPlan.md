@@ -18,6 +18,21 @@ Ethan will additionally handle any issues with maintaining our project's reposit
 
 ## Research / Business Questions
 
+How has Italy’s economic structure changed over the past decade, and which sectors have consistently driven GDP growth? -
+    Using national data from the World Bank, we can examine long-term trends to identify sectors that have shown consistent growth or decline.
+
+How do economic specialization patterns differ across Italian regions, and have these differences narrowed or intensified over time? -
+    Using our more specific regional data from Istat, we analyze whether traditional patterns; Like manufacturing dominance in the North and agriculture or services in the South have and continued to change.
+
+How have unemployment rates changed across industries and regions, and which sectors appear most immune to economic shocks? -
+    For this question we shift our focus to identifying industries that recover more quickly or maintain stable employment during periods of disruption.
+
+How did major events like the COVID-19 pandemic impact Italy’s GDP composition and unemployment trends? -
+   We assess whether these events caused short-term disruptions or longer-term structural changes in the economy.
+
+Based on historical trends, which sectors and regions are best positioned for future economic growth and employment stability? -
+   Using past GDP and unemployment patterns, we explore how historical data can be used to predict future economic outcomes, highlighting regions and industries likely to drive growth or face increased risk.
+
 ## Datasets
 
 We intend to access various datasets from two primary databases in order to obtain the data necessary to perform the analysis as it has been described above. 
@@ -41,6 +56,25 @@ We will then begin visualization of our data and further analysis in order to dr
 The final stage of our project will be to tie up any loose ends in terms of managing our data and completing any additional required analysis before writing our final project report and presentation. We intend to finish drafts of these by the 21st and 23rd of April 2026 respectively, and complete our final drafts of each by the 3rd of May 2026.
 
 ## Constraints
+
+Data Availability & Granularity -
+With readily available  national-level economic data from the World Bank, regional and provincial data from Istat may be incomplete for certain years or sectors.
+
+Data Integration Across Multiple Sources -
+The two data sources differ in scope and structure: World Bank data is national, while Istat data is regional.
+Sector classifications, economic definitions, and time intervals might not be perfectly aligned, thus limiting direct dataset merging.
+
+Measurement Differences -
+Economic indicators may be reported in different units (percent of GDP vs. absolute values, current vs. constant prices).
+
+Predictive Modeling Limitations -
+Forecasts are based solely on historical trends and assume that past patterns provide insight into future outcomes.
+
+Causality & External Influences -
+This analysis is purely observational, meaning identified relationships should be interpreted as correlations rather than causal effects.
+
+ 
+ 
 
 ## Gaps
 
