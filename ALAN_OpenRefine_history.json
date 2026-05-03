@@ -1,0 +1,266 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "gdp_euros_y",
+    "description": "Remove column gdp_euros_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_AVGLIFE_y",
+    "description": "Remove column WB_CCDFS_AVGLIFE_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_CBY_y",
+    "description": "Remove column WB_CCDFS_CBY_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_DEBTDUEY_y",
+    "description": "Remove column WB_CCDFS_DEBTDUEY_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_DFFB_y",
+    "description": "Remove column WB_CCDFS_DFFB_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_XTDEBTY_y",
+    "description": "Remove column WB_CCDFS_XTDEBTY_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_STDEBTRES_y",
+    "description": "Remove column WB_CCDFS_STDEBTRES_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_SOVRATE_y",
+    "description": "Remove column WB_CCDFS_SOVRATE_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_SECNRES_y",
+    "description": "Remove column WB_CCDFS_SECNRES_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_DFGGD_y",
+    "description": "Remove column WB_CCDFS_DFGGD_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_FBMA_y",
+    "description": "Remove column WB_CCDFS_FBMA_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_FBY_y",
+    "description": "Remove column WB_CCDFS_FBY_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_FORDEBTSH_y",
+    "description": "Remove column WB_CCDFS_FORDEBTSH_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_FXSOVSH_y",
+    "description": "Remove column WB_CCDFS_FXSOVSH_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_GGDMA_y",
+    "description": "Remove column WB_CCDFS_GGDMA_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_GGDY_y",
+    "description": "Remove column WB_CCDFS_GGDY_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_XTDEBTRXG_y",
+    "description": "Remove column WB_CCDFS_XTDEBTRXG_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_STDEBTALL_y",
+    "description": "Remove column WB_CCDFS_STDEBTALL_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_XTDEBTRES_y",
+    "description": "Remove column WB_CCDFS_XTDEBTRES_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_PSCY_y",
+    "description": "Remove column WB_CCDFS_PSCY_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_PBY_y",
+    "description": "Remove column WB_CCDFS_PBY_y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WB_CCDFS_PRDEBTY_y",
+    "description": "Remove column WB_CCDFS_PRDEBTY_y"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_AVGLIFE_x",
+    "newColumnName": "WB_CCDFS_AVGLIFE",
+    "description": "Rename column WB_CCDFS_AVGLIFE_x to WB_CCDFS_AVGLIFE"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_CBY_x",
+    "newColumnName": "WB_CCDFS_CBY",
+    "description": "Rename column WB_CCDFS_CBY_x to WB_CCDFS_CBY"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_DEBTDUEY_x",
+    "newColumnName": "WB_CCDFS_DEBTDUEY",
+    "description": "Rename column WB_CCDFS_DEBTDUEY_x to WB_CCDFS_DEBTDUEY"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_DFFB_x",
+    "newColumnName": "WB_CCDFS_DFFB",
+    "description": "Rename column WB_CCDFS_DFFB_x to WB_CCDFS_DFFB"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_XTDEBTY_x",
+    "newColumnName": "WB_CCDFS_XTDEBTY",
+    "description": "Rename column WB_CCDFS_XTDEBTY_x to WB_CCDFS_XTDEBTY"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_XTDEBTRXG_x",
+    "newColumnName": "WB_CCDFS_XTDEBTRXG",
+    "description": "Rename column WB_CCDFS_XTDEBTRXG_x to WB_CCDFS_XTDEBTRXG"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_XTDEBTRES_x",
+    "newColumnName": "WB_CCDFS_XTDEBTRES",
+    "description": "Rename column WB_CCDFS_XTDEBTRES_x to WB_CCDFS_XTDEBTRES"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_STDEBTRES_x",
+    "newColumnName": "WB_CCDFS_STDEBTRES",
+    "description": "Rename column WB_CCDFS_STDEBTRES_x to WB_CCDFS_STDEBTRES"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_STDEBTALL_x",
+    "newColumnName": "WB_CCDFS_STDEBTALL",
+    "description": "Rename column WB_CCDFS_STDEBTALL_x to WB_CCDFS_STDEBTALL"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_SOVRATE_x",
+    "newColumnName": "WB_CCDFS_SOVRATE",
+    "description": "Rename column WB_CCDFS_SOVRATE_x to WB_CCDFS_SOVRATE"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_SECNRES_x",
+    "newColumnName": "WB_CCDFS_SECNRES",
+    "description": "Rename column WB_CCDFS_SECNRES_x to WB_CCDFS_SECNRES"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_PSCY_x",
+    "newColumnName": "WB_CCDFS_PSCY",
+    "description": "Rename column WB_CCDFS_PSCY_x to WB_CCDFS_PSCY"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_PRDEBTY_x",
+    "newColumnName": "WB_CCDFS_PRDEBTY",
+    "description": "Rename column WB_CCDFS_PRDEBTY_x to WB_CCDFS_PRDEBTY"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_PBY_x",
+    "newColumnName": "WB_CCDFS_PBY",
+    "description": "Rename column WB_CCDFS_PBY_x to WB_CCDFS_PBY"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_GGDY_x",
+    "newColumnName": "WB_CCDFS_GGDY",
+    "description": "Rename column WB_CCDFS_GGDY_x to WB_CCDFS_GGDY"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_GGDMA_x",
+    "newColumnName": "WB_CCDFS_GGDMA",
+    "description": "Rename column WB_CCDFS_GGDMA_x to WB_CCDFS_GGDMA"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_FXSOVSH_x",
+    "newColumnName": "WB_CCDFS_FXSOVSH",
+    "description": "Rename column WB_CCDFS_FXSOVSH_x to WB_CCDFS_FXSOVSH"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_FORDEBTSH_x",
+    "newColumnName": "WB_CCDFS_FORDEBTSH",
+    "description": "Rename column WB_CCDFS_FORDEBTSH_x to WB_CCDFS_FORDEBTSH"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_FBY_x",
+    "newColumnName": "WB_CCDFS_FBY",
+    "description": "Rename column WB_CCDFS_FBY_x to WB_CCDFS_FBY"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_FBMA_x",
+    "newColumnName": "WB_CCDFS_FBMA",
+    "description": "Rename column WB_CCDFS_FBMA_x to WB_CCDFS_FBMA"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "WB_CCDFS_DFGGD_x",
+    "newColumnName": "WB_CCDFS_DFGGD",
+    "description": "Rename column WB_CCDFS_DFGGD_x to WB_CCDFS_DFGGD"
+  }
+]
