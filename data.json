@@ -1,0 +1,48 @@
+{
+    "@type": "dcat:Dataset",
+    "accessLevel": "public",
+    "accrualPeriodicity": "R/P1Y",
+    "contactPoint":
+    {
+        "fn": "Ethan Mallory",
+        "hasEmail": "mailto:ethanm8@illinois.edu"
+    },
+    "description": "Merged dataset of Italian Economic indicators over a ~30 year period, combining data from IStat and World Bank.",
+    "distribution":
+    [
+        {
+            "@type": "dcat:Distribution",
+            "accessURL": "https://github.com/ethancmallory/ALAN-IS477",
+            "downloadURL": "https://raw.githubusercontent.com/ethancmallory/ALAN-IS477/main/italy_economic_data_cleaned.csv",
+            "mediaType": "text/html"
+        }
+    ],
+    "identifier": "ethancmallory-ALAN-IS477",
+    "keyword":
+    [
+        "Italy",
+        "GDP",
+        "gross value added",
+        "compensation of employees",
+        "employment rate",
+        "national accounts",
+        "fiscal indicators",
+        "ISTAT",
+        "World Bank"
+    ],
+    "landingPage": "https://github.com/ethancmallory/ALAN-IS477",
+    "modified": "2026-05-06",
+    "publisher":
+    {
+        "@type": "org:Organization",
+        "name": "Ethan Mallory",
+        "subOrganizationOf":
+        {
+            "@type": "org:Organization",
+            "name": "University of Illinois Urbana-Champaign"
+        }
+    },
+    "spatial": "Italy",
+    "temporal": "1990/2025",
+    "title": "Italian National Econmic Indicators Merged Dataset (1990-2025)"
+}
