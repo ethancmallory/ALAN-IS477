@@ -13,10 +13,56 @@ The primary research questions that we set out to answer with this project are a
 - Based on this historic data, which sectors are in the best position for future economic growth or maintained economic stability?
 
 ## Data profile: [max 2000 words] For each dataset used, describe its structure, content, and characteristics. Specify the location of the dataset files in your project repository. Discuss any ethical or legal constraints associated with the data and explain how the datasets relate to your questions
+The first four datasets used are sourced from IStat, mostly containing a single row of interest besides the time element as related to our analysis per dataset, they are as follows (however it is important to note that the provincial data was not used in the final analysis or merged in the final dataset creation, going against our original plan): 
+- Compensation of Employees by Industry, located at "Compensation of employees and its components by industry (IT1,93_1227_DF_DCCN_TNA1_2,1.0).csv" in the Github project repository. This dataset contains estimates of employee pay rates in Italy broken down across industry year by year. Covering the Italian economy on a national level, with a time period of 2015-2024 for this particular dataset. The key variable of interest is "Observation" which contains the relevant compensation data, however there are ~30 other columns specifying informaiton about the indsutry and other economic measures. "Observation" records employee compensation by industry in millions of euros.
+- Output and Value Added by Industry, located at "Output and value added by industry (IT1,92_1225_DF_DCCN_ANA1_1,1.0)(1).csv" in the Github project repository. Contains estimates for gross output and gross value added to the total national GDP by industry, once again on a year to year basis. Timeframe is 2016-2025 in this case, unit of measurement is once again millions of euros. Besides these two key columns there are nearly 40 other containg once again a variety of macroeconomic information about the italian economy and its various industries over the specified period.
+- GDP Supply Side, located at "Gross domestic product supply side (IT1,93_498_DF_DCCN_PILT_1,1.0)(1).csv" in the Github repository. Containing GDP estimates for Italy at the national level as well as across various states/provinces, with an identical timeframe to the first dataset, 2015-2024. Values in "Observation" are once again in millions of euros, and cover provincial breakdowns of the GDP along with the national total, along with ~30 other columns that can be disregarded with relation to our research questions.
+- Provincial Employment Rate, located at "rovincial data (IT1,150_915_DF_DCCV_TAXOCCU1_5,1.0).csv" in the Github Repository. This dataset was not ultimately used for analysis, however it contained unemployment data across different combinations of sex, region, and province from 2023-2025. With the employment rate expressed as a percentage of the working age population that is employed, working age specified as being from 15-89.
+
+These datasets are all published by IStat, and are therefore all subject to the same copyright and otherwise legal constraints. They all have a Creative Commons Attribution 3.0 License, (CC BY 3.0) meaning they can be freely used as long as they are properly attributed. The datasets should also pass on all ethical checks, as there is no information about any single people that could be used to identify individuals, all data points are some form of national or regional aggregate as they relate to people.
+
 ## Data quality: [500-1000 words] Summary of the quality assessment.
+FAIR Principles:
+- Findability: The IStat datasets are rather easily accessible via the IStat data browser, located at esploradati.istat.it, and each dataset has a unique identifier contained in the file name before the file extension.
+- Accessibility: These datasets are available for download without authentication, coming in standard CSV format, and the documentation notes that they are supposed to be available via IStat's RestAPI and their respective Python package istatapi, however there are noatable issues with the use of this package, and the unique identifiers that work with the data browser do not seem to be consistent for api usage. Indicative of potential accessibility issues relating to API maintenance.
+- Interoperability: The datasets as a whole are rather easily interoperable, using standard classification for industries and an easily workable data structure, it is rather easily to work with both the datasets as World Bank uses the same ISO country code which makes for easy matching. It is however notable that the key columns of interest are often recorded differently across these different endpoints, the API refers to "Observation" as "OBS_VALUE" and names are not always descriptive of what the dataset is trying to be representative of.
+- Reusability: All the datasets fall under the same CC-BY 3.0 license and contain sufficient metadata describing the units, valuation methods, and data types needed to make them rather reusable. The only issue of note is the lack of descriptivness with the "Observation" columns, leading the user to have to make the connection between the dataset title and the observations meaning.
+
+We also considered assessing things such as the datasets respective completeness, consistency, timeliness, and relative provenance before begining working with the data. Our observations were as follows:
+- Completeness: While the datasets do not all cover the same time period, World Bank going all the way until the 90s and most of the IStat data only being back until around 2015, we were able to find around a ten year period of overlap where all the datasets should provide coverage on the Italian economy between 2016-2024 period.
+- Consistency: Most measures are summary values recorded some macroeconmic total, and consistency is good as the majority of the data points are in millions of euros, with very low counts of missing values in the original datasets, the biggest consistency challenge being that the majority of World Bank data uses percentage based summaries which should not be compared directly with nominal totals.
+- Timeliness: The IStat datasets are generally up until 2025, making them very recent however the World Bank data creates some lag in our datas timeliness as it is not up to the same date.
+- Provenance: World Bank and IStat are both authoritative sources on worldwide and Italian Economic data, providing a strong degree of provenance for the use of these particular datasets.
 ## Data cleaning: [max 1000 words] Summarize the data cleaning operations you performed and explain how each operation addressed specific data quality issues in your datasets.
+The data cleaning for this particular project occurred in two primary stages, during the initial merge of the 4 datasets that were ultimately used, and cleaning with openrefine to reduce redudancy and remove any duplicate rows as well as augment the column names with the hopes of improved reproducibility.
+
+The merge script reduces any additional data to Italy national level aggregates of the column of interest for that particular dataset regarding the IStat datasets, and includes only information relevant to Italy that was originally in the much larger World Bank dataset. This was done by filtering each Istat dataset to only contain a time element and its relevant "Observation" column, before performing an outer merge based on time. The world bank data was additionally reshaped to long format before the merge.
+
+The OpenRefine cleaning was a relatively simple process as well as the merge script inherently reduced a lot of redudancy by eliminating useless columns in the IStat datasets and removing countries outside our nation of interest from the World Bank data. The merge had originally produced duplicate columns of every relevant World Bank colmn, these were removed. In this process the columns were renamed to several variations of column_x and column_y, after removing the duplicates these names and the respective names that should have been with the IStat data from the start were fixed. I then manually selected the first row of every relevant year as there were several thousand duplicate rows, and kept only the rows that contained non-duplicate information relevant to analysis.
+
+This cleaning process yielded a datast that contains no duplicate rows or columns, with a final shape of 36 years of data across 25 different economic indicators.
+
 ## Findings: [~500 words] Description of any findings including numeric results and/or visualizations.
 ## Future work: [~500-1000 words] Brief discussion of any lessons learned and potential future work.
 ## Challenges: [~500 words] Discuss the main challenges you encountered while working on the project.
+API accessibility was a major challenge when working with the IStat data. The istatapi data was not consistent with the data that we had been able to access using their data portal, and using requests with the IStat data portal did not work as intended either. These issues combined made it rather difficult to deteremine a way to write a script that could automatically download the correct datasets, and has greatly harmed the reproducibilty aspect of our project overall.
 ## Reproducing: Sequence of steps required for someone else to reproduce your results.
+IStat datasets must be accessed following the following respective links to access the IStat data browser in order to get the correct versions of the datasets for reproducibility with the scripts used for cleaning and analysis in this repository.
+
+https://esploradati.istat.it/databrowser/#/en/dw/categories/IT1,DATAWAREHOUSE,1.0/UP_ACC_TERRIT/IT1,93_1227_DF_DCCN_TNA1_2,1.0
+
+https://esploradati.istat.it/databrowser/#/en/dw/categories/IT1,DATAWAREHOUSE,1.0/UP_ACC_ANNUAL/IT1,92_1225_DF_DCCN_ANA1_1,1.0
+
+https://esploradati.istat.it/databrowser/#/en/dw/categories/IT1,DATAWAREHOUSE,1.0/UP_ACC_TERRIT/IT1,93_498_DF_DCCN_PILT_1,1.0
+
+https://esploradati.istat.it/databrowser/#/en/dw/categories/IT1,Z0500LAB,1.0/LAB_OFFER/LAB_OFF_EMPLOY/DCCV_TAXOCCU1/IT1,150_915_DF_DCCV_TAXOCCU1_5,1.0
+
 ## References: Formatted citations for any papers, datasets, or software used in your project.
+
+ISTAT (2025). Compensation of employees and its components by industry. Italian National Institute of Statistics. https://esploradati.istat.it/databrowser/#/en/dw/categories/IT1,DATAWAREHOUSE,1.0/UP_ACC_TERRIT/IT1,93_1227_DF_DCCN_TNA1_2,1.0
+
+ISTAT (2025). Gross domestic product, supply side. Italian National Institute of Statistics. https://esploradati.istat.it/databrowser/#/en/dw/categories/IT1,DATAWAREHOUSE,1.0/UP_ACC_TERRIT/IT1,93_498_DF_DCCN_PILT_1,1.0
+
+ISTAT (2025). Output and value added by industry. Italian National Institute of Statistics. https://esploradati.istat.it/databrowser/#/en/dw/categories/IT1,DATAWAREHOUSE,1.0/UP_ACC_ANNUAL/IT1,92_1225_DF_DCCN_ANA1_1,1.0
+
+https://github.com/openrefine/openrefine
