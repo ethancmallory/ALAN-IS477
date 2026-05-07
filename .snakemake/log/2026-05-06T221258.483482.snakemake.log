@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+host: Alexanders-MacBook-Air-6.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+merge_data        1
+all               1
+total             2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Wed May  6 22:12:58 2026]
+localrule merge_data:
+    input: Compensation of employees and its components by industry (IT1,93_1227_DF_DCCN_TNA1_2,1.0).csv, Gross domestic product supply side (IT1,93_498_DF_DCCN_PILT_1,1.0)(1).csv
+    output: italy_economic_data_cleaned.csv
+    jobid: 1
+    reason: Missing output files: italy_economic_data_cleaned.csv
+    resources: tmpdir=/var/folders/32/k48bqnf163gbq2kkj5tvxf240000gn/T
+[Wed May  6 22:12:58 2026]
+Finished jobid: 1 (Rule: merge_data)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed May  6 22:12:58 2026]
+localrule all:
+    input: italy_economic_data_cleaned.csv
+    jobid: 0
+    reason: Input files updated by another job: italy_economic_data_cleaned.csv
+    resources: tmpdir=/var/folders/32/k48bqnf163gbq2kkj5tvxf240000gn/T
+[Wed May  6 22:12:58 2026]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): /Users/alex/Desktop/IS477/ALAN-IS477/.snakemake/log/2026-05-06T221258.483482.snakemake.log

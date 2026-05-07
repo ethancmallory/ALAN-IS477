@@ -1,0 +1,7 @@
+Assuming unrestricted shared filesystem usage.
+host: Alexanders-MacBook-Air-6.local
+Building DAG of jobs...
+MissingInputException in rule all in file "/Users/alex/Desktop/IS477/ALAN-IS477/Snakefile", line 1:
+Missing input files for rule all:
+    affected files:
+        italy_economic_data_cleaned.csv
